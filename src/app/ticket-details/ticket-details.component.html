@@ -1,0 +1,9 @@
+<div *ngIf="(ticket$ | async) as ticket">
+    <h1>Ticket Number : {{ticket.id}}</h1>
+    <div>Completed : {{ ticket.completed ? 'Yes' : 'No' }}</div>
+    <div *ngIf="ticket.assigneeId">Assignee : {{ticket.assigneeId}}</div>
+
+    <h3>Description</h3>
+    <p>{{ticket.description}}</p>
+</div>
+

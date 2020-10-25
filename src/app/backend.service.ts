@@ -15,6 +15,7 @@ function randomDelay() {
 
 @Injectable()
 export class BackendService {
+    
     public storedTickets: Ticket[] = [
         {
             id: 0,
