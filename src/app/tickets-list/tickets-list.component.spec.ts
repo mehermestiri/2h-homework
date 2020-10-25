@@ -1,3 +1,4 @@
+import { SearchPipe } from './../search.pipe';
 import { Ticket } from './../../interfaces/ticket.interface';
 import { User } from './../../interfaces/user.interface';
 import { of } from 'rxjs';
@@ -29,7 +30,7 @@ describe('TicketsListComponent', () => {
     });
 
     await TestBed.configureTestingModule({
-      declarations: [ TicketsListComponent ],
+      declarations: [ TicketsListComponent, SearchPipe ],
       providers: [{provide: BackendService, useValue: backendServiceSpy}]
     })
     .compileComponents();

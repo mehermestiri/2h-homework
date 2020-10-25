@@ -14,6 +14,7 @@ export class TicketsListComponent{
 
   public readonly users$: Observable<User[]> = this.backendService.users();
   public readonly tickets$: Observable<Ticket[]> = this.backendService.tickets();
+  searchText: string;
 
   constructor(private readonly backendService: BackendService) {}
 

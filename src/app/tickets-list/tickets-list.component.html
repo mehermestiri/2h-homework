@@ -1,7 +1,11 @@
 <h2>Tickets</h2>
 
+<div>
+  <input class="form-control" type="text" [(ngModel)]="searchText" placeholder="Search">
+</div>
+
 <ul>
-    <li *ngFor="let ticket of tickets$ | async">
+    <li *ngFor="let ticket of tickets$ | async | search: searchText;">
         Ticket: {{ ticket.id }}, 
         <a [routerLink]="['/ticket', ticket.id]">{{ ticket.description }}</a>
     </li>
